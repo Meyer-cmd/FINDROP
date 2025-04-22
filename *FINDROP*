@@ -1,0 +1,148 @@
+#include <stdio.h>
+#include  <stdlib.h>
+#include <string.h>
+
+//------------PRODUCT MODULE---------
+typedef struct{
+   int id;
+   char name[50];
+   float price;
+   int quantity;
+}Product;
+
+void addProduct(){
+  FILE*fp = fopen("products.txt","a");
+  if(!fp){
+    printf("Error opening product file.\n");
+    return;
+    }
+    Product p;
+    printf("Enter Product ID:");
+    scanf("%d",&p.id);
+    printf("Enter Name:");
+    scanf("%s",&p.name);
+    printf("Enter Price:");
+    scanf("%f",&p.price);
+    printf("Enter Quantity:");
+    scanf("%d",&p.quantity);
+
+    fprintf(fp,"%d,%s,%f,%d\n",p.id,p.name,p.price,p.quantity);
+    fclose(fp);
+    printf("Product added!\n");
+}
+//---------------SUPPLIER MODULE-----------
+typedef struct{
+   int id;
+   char name[50];
+   char contact[50];
+}Supplier;
+
+void addSupplier(){
+    FILE*fp =fopen("supplier.txt","a");
+    if(!fp){
+     printf("Error opening supplier file.\n");
+    return;
+    }
+    Supplier s;
+    printf("Enter Suppliers ID:");
+    scanf("%d",&s.id);
+    printf("Enter Name:");
+    scanf("%s",&s.name);
+    printf("Enter Contact info:");
+    scanf("%s",&s.contact);
+
+    fprintf(fp,"%d,%s,%s\n",s.id,s.name,s.contact);
+    fclose(fp);
+    printf("Supplier added!\n");
+}
+//---------------ORDER MODULE-------------
+typedef struct{
+   int orderId;
+   int ProductId;
+   int quantiy;
+   char date[20];
+}Order;
+
+void addOrder(){
+   FILE*fp =fopen("order.txt","a");
+   if(!fp){
+    printf("Error opening order file.\n");
+    return;
+    }
+    Order o;
+    printf("Enter Order ID:");
+    scanf("%d",&o.orderId);
+    printf("Enter Product ID:");
+    scanf("%d",&o.ProductId);
+    printf("Enter Quantity:");
+    scanf("%d",&o.quantiy);
+    printf("Enter Order Date(YYYY-MM-DD):");
+    scanf("%s",o.date);
+
+    fprintf(fp,"%d,%d,%d,%s\n",o.orderId,o.ProductId,o.quantiy,o.date);
+    fclose(fp);
+    printf("Order added!\n");
+}
+//-------------FINANCE MODULE----------
+typedef struct{
+   int id;
+   char type[10];//income or expenses
+   float amount;
+   char date[20];
+   char note[100];
+}Finance;
+
+void addFinanceRecord(){
+   FILE*fp =fopen("finance.text","a");
+   if(!fp){
+    printf("Error opening finance file.\n");
+    return;
+    }
+    Finance f;
+    printf("Enter Record ID:");
+    scanf("%d",&f.id);
+    printf("Enter Type(income/expense):");
+    scanf("%s",f.type);
+    printf("Enter Amount:");
+    scanf("%f",&f.amount);
+    printf("Enter Date(YYYY-MM-DD):");
+    scanf("%s",f.date);
+    printf("Enter Note:");
+    scanf("%s",f.note);
+
+    fprintf(fp,"%d,%s,%.2f,%s\n",f.id,f.type,f.amount,f.date,f.note);
+    fclose(fp);
+    printf("Finance record added!\n");
+}
+//-------------MAIN MENU----------
+void menu(){
+    int choice;
+    while(1){
+      printf("\n-------DROPSHIPPING & FINANCE(FINDROP)-------\n");
+      printf("1.Add Product\n");
+      printf("2.Add Supplier\n");
+      printf("3.Add Order\n");
+      printf("4.Add Finance Record\n");
+      printf("5.Exit\n");
+      printf("Select option: ");
+      scanf("%d",&choice);
+
+      switch(choice){
+        case 1: addProduct();
+        break;
+        case 2: addSupplier();
+        break;
+        case 3: addOrder();
+        break;
+        case 4: addFinanceRecord();
+        break;
+        case 5: exit(0);
+        default:
+        printf("Invalid Choice.\n");
+      }
+    }
+}
+int main(){
+  menu();
+  return 0;
+}
