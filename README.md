@@ -25,13 +25,13 @@ file for data storage.
    -stored in `finance.txt`.
 
 
-**Technologies Used**
+**TECHNOLOGiES USED**
 
 - *Programming Language*: C
 - *Platform*: Console-based (Linux/Ubuntu recommended)
 - *Data Storage*: File handling using `.txt` files
 
- Project Structure
+ **PROJECT STRUCTURE**
 
 Findrop/
 
@@ -46,7 +46,7 @@ README.md            # Project documentation
 Makefile             # (optional) for compiling the project
 
 
-How to Run
+**HOW TO RUN**
 
 1. Clone the repository:
 bash
@@ -63,7 +63,7 @@ gcc main.c product.c finance.c  supplier.c orders.c -o findrop
 bash
 ./findrop
 
- Sample Output
+ **SAMPLE OUTPUT**
 
 bash
 Welcome to Findrop Management System
@@ -73,7 +73,7 @@ Welcome to Findrop Management System
 4. Add Finance Recordoption
 Select option
 
-Authors
+**AUTHORS**
 
 - Project Lead–[Lencer Meyer](http://github.com/Meyer-cmd)
 - Product module – [Naomi Wambui](http://github.com/NaomiWambuiN)
@@ -81,11 +81,11 @@ Authors
 - Order Module– [Zachariah Iteba](http://github.com/Cs-son)
 - finance Module-[Ellen Surleaf](http://github.com/Surleaf)
 
-License
+**LICENSE**
 
 This project is licensed under the MIT License.
 
-Contact
+**CONTACT**
 
 For questions or suggestions:
 - GitHub: [Meyer-cmd](https://github.com/Meyer-cmd)
