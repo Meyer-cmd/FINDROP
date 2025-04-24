@@ -1,8 +1,8 @@
-PROJECT TITTLE
-FINDROP
+**PROJECT TITTLE**
+**FINDROP**
 An E-commerce Dropshipping and Financial Management Tool
 
-OVERVIEW
+**OVERVIEW**
 Findrop is  simple C language console application designed to combine the convenience of **dropshipping**with efficient **financial management**.
 The main aim is to help handle Product inventory,supplier information,customer orders and financial records using a plain text
 file for data storage.
