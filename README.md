@@ -31,8 +31,7 @@ file for data storage.
 - *Platform*: Console-based (Linux/Ubuntu recommended)
 - *Data Storage*: File handling using `.txt` files
 
-
-📂 Project Structure
+ Project Structure
 
 Findrop/
 
