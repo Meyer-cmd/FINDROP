@@ -36,11 +36,17 @@ file for data storage.
 Findrop/
 
 -main.c               # Entry point of the program
+
 -product.c/.h         # Handles product-related logic
+
 -finance.c/.h         # Tracks income, expenses, and profits
+
 -supplier.c           # Manage suppliers details
+
 -orders.c/.h          # Manages customer orders
+
 -data/                # Folder where product/order data is stored
+
 -README.md            # Project documentation
 
 Makefile             # (optional) for compiling the project
